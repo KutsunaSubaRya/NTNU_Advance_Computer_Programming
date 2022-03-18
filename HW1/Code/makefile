@@ -11,4 +11,4 @@ all: main
 main: main.o maze.o robot.o
 	$(CC) $(CFLAGS) -o $(NAMEONE) $(ONE)  $(LDLIBS)
 clean:
-	-rm -rf $(NAMEONE) $(ONE)
+	-rm -f $(NAMEONE) $(ONE)

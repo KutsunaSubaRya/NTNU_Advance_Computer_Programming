@@ -3,7 +3,6 @@
 #include <vector>
 #include "maze.h"
 #include "robot.h"
-
 int main()
 {
     int w,h;

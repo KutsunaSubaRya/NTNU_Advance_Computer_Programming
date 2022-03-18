@@ -1,9 +1,11 @@
 #include "robot.h"
 Robot::Robot(const std::pair<const int,const int> pos, const int face):x(pos.first), y(pos.second), Face(face){}
 bool Robot::is_visited_and_same_facetoward(const int _x, const int _y, const int _Face)const{
-    for(auto i:visited)
-        if(i.first.first==_x && i.first.second==_y && i.second==_Face)
+    for(auto i:visited){
+        if(i.first.first==_x && i.first.second==_y && i.second==_Face){
             return true;
+        }
+    }
     return false;
 }
 std::pair<const int,const int> Robot::Get_Position(void)const{
@@ -29,8 +31,9 @@ void Robot::find_final_state(const long long n, const long long current_n){
     long long i,loop_size=1,remain_n=n-current_n;
     const long long visited_length=visited.size();
     for(i=visited_length-1;i>=0;i--){
-        if(visited[i].first.first==x && visited[i].first.second==y && visited[i].second==Face)
+        if(visited[i].first.first==x && visited[i].first.second==y && visited[i].second==Face){
             break;
+        }
         loop_size++;
     }
     long long final_state=(remain_n%loop_size)+i;

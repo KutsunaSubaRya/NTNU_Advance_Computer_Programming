@@ -5,7 +5,7 @@
 class Robot{
     private:
         int x,y,Face; // robot position
-        static constexpr int Face_Toward[4][2]={{0,-1},{1,0},{0,1},{-1,0}};
+        const int Face_Toward[4][2]={{0,-1},{1,0},{0,1},{-1,0}};
         std::vector<std::pair<std::pair<int,int>,int>> visited; 
         //first.first=>x, first.second=>y, second=>face direction which have visited 
     public:
