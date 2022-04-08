@@ -2,13 +2,13 @@ CC= g++
 CFLAGS= -Wall -Wextra -std=c++14 -O2
 LDLIBS= -lm
 NAMEONE= main
-ONE= main.o maze.o robot.o
+ONE= Main.o Maze.o Robot.o
 
 .PHONY: all clean
 
 all: main
 
-main: main.o maze.o robot.o
+main: Main.o Maze.o Robot.o
 	$(CC) $(CFLAGS) -o $(NAMEONE) $(ONE)  $(LDLIBS)
 clean:
-	-rm -f $(NAMEONE) $(ONE)
+	-rm -rf $(NAMEONE) $(ONE)
